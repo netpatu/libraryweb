@@ -7,7 +7,8 @@
    ####    updating the path to the ENV Variable
 
    ### 2, install Mysql
-   #### download Mysql package and install it
+   #### download Mysql package and install it with the link:
+   https://www.mysql.com/support/supportedplatforms/database.html
    #### Open the terminal
    #### type "mysql -h localhost -u ${username} -p" to access mysql server
    #### 
