@@ -8,8 +8,10 @@
    ####    updating the path to the ENV Variable
 
    ### 2, Install Mysql
-   #### Download Mysql package and install it with the link:
+   #### Download Mysql package with the link:
    https://www.mysql.com/support/supportedplatforms/database.html
+   ####  Install Mysql 
+   Setup user name and password of the sql server after Mysql installed. 
    #### Open the terminal to access mysql server
    Type "mysql -h localhost -u ${username} -p" 
    #### Create data base with below cmd in terminal
