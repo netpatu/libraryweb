@@ -39,3 +39,5 @@ Launch the web page with http://localhost:8081
 ## Install apk on the phone 
 Copy the apk file to the phone.  
 Install the aok file inside the phone.  
+
+## Any confuse and doubt Pls contact me 381545452@qq.com
