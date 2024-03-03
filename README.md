@@ -31,11 +31,11 @@ Front-end project is developed with vue and android which Beck-end is springboot
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='图书表';
    
 ## Gen the beckend JAR package and run it
-Open ternimal 
-Got into the the ptoject with "cd ${project path}"
-Run cmd to build application package with "mvn clean package -Dmaven.test.skip=true"
-Got into the the package output location and run cmd "java -jar ${package name}.jar" to run up the application
-Launch the web page with http://localhost:8081
+Open ternimal   
+Got into the the ptoject with "cd ${project path}"  
+ Run cmd to build application package with "mvn clean package -Dmaven.test.skip=true"  
+Got into the the package output location and run cmd "java -jar ${package name}.jar" to run up the application  
+Launch the web page with http://localhost:8081  
 ## Install apk on the phone 
-Copy the apk file to the phone.
-Install the aok file inside the phone. 
+Copy the apk file to the phone.  
+Install the aok file inside the phone.  
