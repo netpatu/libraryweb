@@ -1,6 +1,7 @@
 # Libraryweb project
 ## Introduction
-This is a Book Management System that allows users to create, read, update, and delete books. It consist of a front-end user interface and a back-end paired with a database. 
+This is a Book Management System that allows users to create, read, update, and delete books. It consist of two front-end user interface project and a back-end paired with a database. 
+Front-end project is developed with vue and android which Beck-end is springboot , web and mybais.Both them are provide the test case for api or data persist, which apply the TDD principle.
 # Project deploy at local on windows
 ## Env set up
 
