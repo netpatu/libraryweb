@@ -30,7 +30,7 @@ Front-end project is developed with vue and android which Beck-end is springboot
             PRIMARY KEY (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='图书表';
    
-## Gen the beckend JAR package
+## Gen the beckend JAR package and run it
 Open ternimal 
 Got into the the ptoject with "cd ${project path}"
 Run cmd to build application package with "mvn clean package -Dmaven.test.skip=true"
