@@ -1,5 +1,7 @@
-# Libraryweb project deploy at local on windows
-
+# Libraryweb project
+## Introduction
+This is a Book Management System that allows users to create, read, update, and delete books. It consist of a front-end user interface and a back-end paired with a database. 
+# Project deploy at local on windows
 ## Env set up
 
    ### 1, Install JDK 1.8
