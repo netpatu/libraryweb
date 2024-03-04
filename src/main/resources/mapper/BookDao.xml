@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.library.demo.dao.BookDao">
+    <update id="createTable" parameterType="string">
+        CREATE TABLE ${tableName} (
+            `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+            `book_id` bigint(20) DEFAULT NULL COMMENT '书本ID',
+            `title` varchar(50) DEFAULT NULL COMMENT '书本名称',
+            `author` varchar(50) DEFAULT NULL COMMENT '书本作者',
+            `publicationDate` date DEFAULT NULL COMMENT '书本发行时间',
+            `isbn` varchar(50) DEFAULT NULL COMMENT '书本序列号',
+            PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='图书表';
+    </update>
+
+    <select id="queryBooks" resultType="com.example.library.demo.entity.Book">
+		SELECT
+		t.book_id,
+		t.title as 'bookTitle',
+		t.author,
+		t.publicationDate,
+		t.isbn
+		FROM tb_book t
+		ORDER BY id
+		DESC
+	</select>
+
+    <select id="queryBookLimit" parameterType="java.util.Map" resultType="com.example.library.demo.entity.Book">
+		SELECT
+		t.book_id,
+		t.title as 'bookTitle',
+		t.author,
+		t.publicationDate,
+		t.isbn
+		FROM tb_book t
+		ORDER BY id
+		DESC
+		LIMIT #{limit}
+		OFFSET #{offset}
+	</select>
+
+    <select id="queryBookById" parameterType="int" resultType="com.example.library.demo.entity.Book">
+		SELECT
+		t.book_id,
+		t.title as 'bookTitle',
+		t.author,
+		t.publicationDate,
+		t.isbn
+		FROM tb_book t
+		WHERE
+		book_id=#{bookId}
+	</select>
+
+	<!--表中id 绑定倒 实体中的employeeId-->
+    <insert id="insertBook" useGeneratedKeys="true" keyProperty="bookId"
+            keyColumn="id" parameterType="com.example.library.demo.entity.Book">
+		INSERT INTO
+		tb_book(
+		book_id,
+		title,
+		author,
+		publicationDate,
+		isbn)
+		VALUES
+		(
+		#{bookId},
+		#{bookTitle},
+		#{author},
+		#{publicationDate},
+		#{isbn}
+		)
+	</insert>
+    <update id="updateBook" parameterType="com.example.library.demo.entity.Book">
+        update tb_book
+        <set>
+			<if test="bookId != null">book_id=#{bookId},</if>
+            <if test="bookTitle != null">title=#{bookTitle},</if>
+            <if test="author != null">author=#{author},</if>
+            <if test="publicationDate != null">publicationDate=#{publicationDate},</if>
+			<if test="isbn != null">isbn=#{isbn}</if>
+        </set>
+        where book_id=#{bookId}
+    </update>
+    <delete id="deleteBook" parameterType="int">
+		DELETE FROM
+		tb_book
+		WHERE
+		book_id =
+		#{book_id}
+	</delete>
+
+	<delete id="dropBook">
+		DROP TABLE
+		tb_book
+	</delete>
+</mapper>
+    
