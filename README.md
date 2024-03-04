@@ -6,7 +6,7 @@ Web project used VUE, Elememt UI, Axios. Android Porject used kotlin, coroutine,
 
 Beckend: demoWeb.zip
 Web : book_vue.zip
-Android: pub_library_android.zip
+Android: https://github.com/netpatu/book_library_android.git
 
 # Project deploy at local on windows
 ## Env set up
