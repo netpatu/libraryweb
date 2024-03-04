@@ -4,6 +4,10 @@ This is a Book Management System that allows users to create, read, update, and 
 Front-end project is developed with vue and android which Beck-end is springboot , web and mybais.Both them are provide the test case for api or data persist, which apply the TDD principle.
 Web project used VUE, Elememt UI, Axios. Android Porject used kotlin, coroutine, MVVM. Any further question pls contact me 381545452@qq.com.
 
+Beckend: demoWeb.zip
+Web : book_vue.zip
+Android: pub_library_android.zip
+
 # Project deploy at local on windows
 ## Env set up
 
@@ -41,5 +45,6 @@ Launch the web page with http://localhost:8081
 ## Install apk on the phone 
 Copy the apk file to the phone.  
 Install the aok file inside the phone.  
-
+## Build Web application
+run cmd "npm run build" in the book_vue project.
 ## Any confuse and doubt Pls contact me 381545452@qq.com
